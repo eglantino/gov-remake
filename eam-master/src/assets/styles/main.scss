@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import "colors";
+
+html {
+  font-family: "Open Sans", sans-serif !important;
+  overflow: hidden !important;
+}
+
+.v-card {
+  &.v-card--variant-outlined {
+    border-color: $grey-200;
+  }
+}
+
+.v-list {
+  padding: 0;
+
+  &.v-select-list {
+    > .v-list-subheader {
+      color: $grey-600;
+      font-weight: 700;
+    }
+  }
+}
+
+.v-btn {
+  &.v-btn--has-bg {
+    &.v-btn--disabled {
+      background-color: rgba($black, 0.12) !important;
+    }
+  }
+}
+
+label {
+  color: $grey-400;
+  letter-spacing: 0.03em !important;
+}
+
+.text-subtitle-1 {
+  color: $grey-500;
+}
+
+.ps {
+  width: 100%;
+
+  .ps__rail-x {
+    display: none;
+  }
+
+  .ps__rail-y {
+    //opacity: 0.6;
+    z-index: 1;
+    width: 4px;
+
+    &:hover,
+    &:focus,
+    &.ps--clicking {
+      background-color: transparent;
+
+      .ps__thumb-y {
+        width: 4px;
+      }
+    }
+
+    .ps__thumb-y {
+      width: 4px;
+    }
+  }
+}
+
+.v-toolbar.v-app-bar {
+  .v-img__img {
+    position: relative;
+  }
+
+  .v-app-bar-title {
+    color: $grey-100;
+    font-weight: 700;
+    margin-left: 16px;
+  }
+
+  .v-avatar {
+    background-color: $grey-300;
+  }
+
+  .v-icon {
+    color: $white;
+  }
+}
+
+.v-toolbar {
+  &:not(.v-app-bar) {
+    border-bottom: 2px solid $grey-200 !important;
+
+    .v-toolbar__content {
+      padding: 0 12px;
+
+      .v-toolbar-title {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0;
+        text-transform: uppercase;
+
+        .v-btn {
+          .v-icon {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .v-toolbar__extension {
+      padding: 0 12px;
+    }
+
+    &.v-toolbar--extended {
+      .v-toolbar__content {
+        flex-wrap: wrap;
+        height: 105px !important;
+
+        .v-toolbar__title {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+// Dialog
+.v-dialog {
+  .v-card {
+    .v-card-title {
+      align-items: center;
+      display: flex;
+      height: 80px;
+
+      .v-btn.v-btn--icon {
+        color: $grey-400;
+      }
+    }
+  }
+}
+
+.v-form {
+  .v-input {
+    .v-input__control {
+      .v-field__input {
+        input,
+        .v-autocomplete__selection {
+          margin: 4px 0;
+        }
+
+        .v-combobox__selection, .v-select__selection {
+          margin: 0 !important;
+
+          .v-chip {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      label {
+        opacity: 1;
+      }
+    }
+
+    .v-input__details {
+      padding: 0;
+    }
+  }
+}
+
+.v-menu__content {
+  .v-list-item {
+    cursor: pointer;
+
+    &::before {
+      opacity: 0 !important;
+    }
+
+    &.v-list-item--active {
+      .v-list-item-title {
+        font-weight: bold;
+      }
+    }
+
+    &.v-list-item--highlighted,
+    &:hover {
+      &.v-theme--light {
+        background: $grey-200;
+      }
+    }
+  }
+
+  &.studio-settings-menu {
+    .v-list-item-title {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.tooltip {
+  background: $white;
+  color: $grey-400;
+  opacity: 1 !important;
+}
